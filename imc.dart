@@ -1,7 +1,11 @@
 import 'dart:io';
 
 main(){
+  calculoImc();
+}
 
+calculoImc(){
+  
   print("Digite seu peso: ");
   var textPeso = stdin.readLineSync();
   var peso = int.parse(textPeso);
@@ -13,6 +17,11 @@ main(){
   var calcImc = peso / (altura * altura);
 
   print(calcImc);
+  imprimirResultado(calcImc);
+  
+}
+
+imprimirResultado(calcImc){
 
   if (calcImc < 18) {
     print("Abaixo do peso");
